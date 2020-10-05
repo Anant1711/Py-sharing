@@ -35,7 +35,7 @@ print ("")
 print ("--------------------------------------[" + hostname + "]------------------------------------")
 print ("")
 
-print ("------{Enter this IP into your reciever device's browser as [IP:9002] or Scan the share.png}-------")
+print ("------{Enter this IP into your receiver device's browser as [IP:9002] or Scan the share.png}-------")
 print ("")
 
 s.connect(("8.8.8.8", PORT))
