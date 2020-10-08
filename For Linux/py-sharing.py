@@ -1,7 +1,7 @@
 #-*- coding: utf-8 -*-
 import os
 import socket
-import qrcode
+import pyqrcode
 
 class bcolors:
     ENDC = '\033[95m'
@@ -43,5 +43,5 @@ print ("")
 
 img = qrcode.make(s.getsockname()[0]+":9004")                           #for store data in qrcode png 
 img.save("/home/infinity/Desktop/share.png")           #for saving qrcode png (change this path)
-
+print (img.terminal())
 os.system("python3 -m http.server 9004")             #it will start server at port 9002
