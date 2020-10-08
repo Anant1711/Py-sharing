@@ -3,6 +3,7 @@
 import os
 import socket
 import qrcode
+from PIL import Image     
 
 #BANNER
 print ("")
@@ -44,5 +45,8 @@ print ("")
 
 img = qrcode.make(s.getsockname()[0]+":9002")				#for store data in qrcode png 
 img.save("C:/Users/anako/OneDrive/Desktop/share.png")		#for saving qrcode png (change this path)
+
+img = Image.open('C:/Users/anako/OneDrive/Desktop/share.png')  #for open the saved qrcode image(change this path)
+img.show() 
 
 os.system("py -m http.server 9002")     	#it will start server at port 9002
