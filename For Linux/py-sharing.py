@@ -41,7 +41,7 @@ s.connect(("8.8.8.8", PORT))
 print("-----------------------------------[" + s.getsockname()[0] + "]------------------------------------------")    #it will give us sender's IP
 print ("")
 
-img = qrcode.make(s.getsockname()[0]+":9004")                           #for store data in qrcode png 
-img.save("/home/infinity/Desktop/share.png")           #for saving qrcode png (change this path)
+img = pyqrcode.create(s.getsockname()[0]+":9004")                           #for store data in qrcode png 
+img.png("/home/infinity/Desktop/share.png")           #for saving qrcode png (change this path)
 print (img.terminal())
 os.system("python3 -m http.server 9004")             #it will start server at port 9002
